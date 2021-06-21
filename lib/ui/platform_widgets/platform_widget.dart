@@ -71,7 +71,6 @@ Widget buildBottomPicker(BuildContext context, Widget picker) {
               onPressed: () {
                 Navigator.pop(context);
               },
-//              border: false,
             ),
           ),
         ),

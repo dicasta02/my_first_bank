@@ -9,6 +9,7 @@ class MyFirstBank extends StatelessWidget {
   MyFirstBank() {
     ApplicationColors().primarySwatch = _primarySwatch;
     ApplicationColors().secondaryButtonColor = const Color(0xFF00BAA7);
+    ApplicationColors().secondaryTextColor = const Color(0xFF506296);
     ApplicationColors().defaultTextColor = const Color(0xFF757575);
     ApplicationColors().neutralBlackColor = const Color(0xFF4B4B4B);
   }
@@ -18,16 +19,16 @@ class MyFirstBank extends StatelessWidget {
   static const MaterialColor _primarySwatch = MaterialColor(
     _primarySwatchValue,
     <int, Color>{
-      50: Color(0xFFFBE6EE),
-      100: Color(0xFFF4C0D5),
-      200: Color(0xFFED96BA),
-      300: Color(0xFFE56B9E),
-      400: Color(0xFFE04C89),
+      50: Color(0xFFe0f7fa),
+      100: Color(0xFFb2ebf2),
+      200: Color(0xFF80deea),
+      300: Color(0xFF4dd0e1),
+      400: Color(0xFF26c6da),
       500: Color(_primarySwatchValue),
-      600: Color(0xFFD6276C),
-      700: Color(0xFFD02161),
-      800: Color(0xFFCB1B57),
-      900: Color(0xFFC21044),
+      600: Color(0xFF00bcd4),
+      700: Color(0xFF00acc1),
+      800: Color(0xFF0097a7),
+      900: Color(0xFF00838f),
     },
   );
   static const int _primarySwatchValue = 0xFF00BAA7;

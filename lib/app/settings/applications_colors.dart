@@ -5,6 +5,7 @@ class ApplicationColors {
 
   MaterialColor primarySwatch;
   Color secondaryButtonColor;
+  Color secondaryTextColor;
   Color defaultTextColor;
   Color grayIconsColor;
   Color neutralBlackColor;

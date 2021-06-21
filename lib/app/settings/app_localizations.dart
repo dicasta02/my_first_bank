@@ -42,7 +42,26 @@ class AppLocalizations {
     'landingTitle': '¡Empieza a disfrutar de tu Banco!',
     'signInText': 'Iniciar Sesion',
     'createAcount': 'Crear Cuenta',
+    'noAvailable': 'Pantalla en Construcción',
+    'back': 'Regresar',
     'home': 'Login',
+    'user': 'Usuario',
+    'password': 'Contraseña',
+    'forgotUserNameQuestion': '¿Olvidaste tu Usuario?',
+    'forgotUserPasswordQuestion': '¿Olvidaste tu contraseña?',
+    'emptyFields': 'emptyFields',
+    'rememberMe': 'Recuérdame',
+    'continue': 'Continuar',
+    'noAccountQuestion': '¿No tienes cuenta?',
+    'noAccountAction': 'Regístrate',
+    'cancel': 'Cancelar',
+    'defaultTitleError': 'Error',
+    'authConfirmationPendingError':
+        'No es posible ingresar, el usuario está pendiente de confirmación.',
+    'authResettingPasswordError':
+        'No es posible ingresar, es necesario que actualices la contraseña.',
+    'authWrongCredentialsError':
+        'Verifica tus credenciales, usuario y/o contraseña no válida.',
     'services': 'Otros Servicios',
   };
 
@@ -63,7 +82,45 @@ class AppLocalizations {
 
   String get createAcount => getLocalizedValue('createAcount');
 
+  String get noAvailable => getLocalizedValue('noAvailable');
+
+  String get back => getLocalizedValue('back');
+
   String get home => getLocalizedValue('home');
+
+  String get user => getLocalizedValue('user');
+
+  String get forgotUserNameQuestion =>
+      getLocalizedValue('forgotUserNameQuestion');
+
+  String get forgotUserPasswordQuestion =>
+      getLocalizedValue('forgotUserPasswordQuestion');
+
+  String get password => getLocalizedValue('password');
+
+  String get rememberMe => getLocalizedValue('rememberMe');
+
+  String get continueKey => getLocalizedValue('continue');
+
+  String get noAccountQuestion => getLocalizedValue('noAccountQuestion');
+
+  String get noAccountAction => getLocalizedValue('noAccountAction');
+
+  String get cancel => getLocalizedValue('cancel');
+
+  String get defaultTitleError => getLocalizedValue('defaultTitleError');
+
+  String get authConfirmationPendingError =>
+      getLocalizedValue('authConfirmationPendingError');
+
+  String get authResettingPasswordError =>
+      getLocalizedValue('authResettingPasswordError');
+
+  String get authResettingExpiredPassword =>
+      getLocalizedValue('authResettingExpiredPassword');
+
+  String get authWrongCredentialsError =>
+      getLocalizedValue('authWrongCredentialsError');
 
   String get services => getLocalizedValue('services');
 }

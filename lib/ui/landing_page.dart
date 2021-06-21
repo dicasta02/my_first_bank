@@ -1,6 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:my_first_bank/app/settings/applications_assets.dart';
 import 'package:my_first_bank/app/settings/applications_colors.dart';
 import 'package:my_first_bank/blocs/provider/bloc.dart';
@@ -8,7 +6,6 @@ import 'package:my_first_bank/ui/base_state.dart';
 import 'package:my_first_bank/ui/home_page.dart';
 import 'package:my_first_bank/ui/no_available_page.dart';
 import 'package:my_first_bank/ui/platform_widgets/platform_bottom.dart';
-import 'package:my_first_bank/ui/platform_widgets/platform_progress_indicator.dart';
 import 'package:package_info/package_info.dart';
 
 class LandingPage extends StatefulWidget {
@@ -34,18 +31,20 @@ class _LandingPageState extends BaseState<LandingPage, Bloc> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          Container(
-            height: imageHeight,
-            width: double.infinity,
-            child: CachedNetworkImage(
-              imageUrl:
-                  'https://lh3.googleusercontent.com/proxy/vHMdxAMe2ZM-yE7hWimuLHXMe_qg5mS4r5iqZiFj6_aMUmR-3rI0BcI_BjjdztZrC6YjeSnqIKOYuWrwATJSt2rUJenRr7dehL4E_QCG4mRXPX77EgMJB0cfSwVhozxK-2OZUw',
-              fit: BoxFit.cover,
-              placeholder: (context, url) => Center(
-                child: PlatformProgressIndicator(),
-              ),
-            ),
-          ),
+          Positioned(
+              left: 0,
+              top: 0,
+              right: 0,
+              child: Container(
+                height: 240.0,
+                width: 120.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(ApplicationsAssets.banners),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              )),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -70,7 +69,7 @@ class _LandingPageState extends BaseState<LandingPage, Bloc> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 24.0),
+                      padding: const EdgeInsets.only(bottom: 50.0),
                       child: Text(
                         l10n.landingTitle,
                         textAlign: TextAlign.center,
@@ -94,7 +93,7 @@ class _LandingPageState extends BaseState<LandingPage, Bloc> {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.only(bottom: 40.0),
+                      padding: const EdgeInsets.only(bottom: 80.0),
                       width: widgetsWidth,
                       child: PlatformButton(
                         text: l10n.createAcount,
@@ -108,7 +107,7 @@ class _LandingPageState extends BaseState<LandingPage, Bloc> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 16.0),
+                      padding: const EdgeInsets.only(bottom: 40.0),
                       child: Text(
                         appVersion,
                         style: Theme.of(context).textTheme.caption,
