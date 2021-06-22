@@ -14,7 +14,7 @@ if [ $option = 1 ]; then
     clear
     echo "Building Dev IPA..."
     flutter clean
-    flutter build ios --debug -t lib/main_dev.dart
+    flutter build ios --debug -t lib/main.dart
     mkdir build/ios/iphoneos/Payload
     mv build/ios/iphoneos/Runner.app build/ios/iphoneos/Payload
     zip -r Payload.ipa build/ios/iphoneos/Payload
@@ -22,7 +22,7 @@ elif [ $option = 2 ]; then
     clear
     echo "Building Profile IPA..."
     flutter clean
-    flutter build ios --profile -t lib/main_profile.dart
+    flutter build ios --profile -t lib/main.dart
     cd build/ios/iphoneos
     mkdir Payload
     mv Runner.app Payload

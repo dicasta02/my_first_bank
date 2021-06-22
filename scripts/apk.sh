@@ -16,12 +16,12 @@ if [ $option = 1 ]; then
     clear
     echo "Building Dev APK..."
     flutter clean
-    flutter build apk --debug -t lib/main_dev.dart
+    flutter build apk --debug -t lib/main.dart
 elif [ $option = 2 ]; then
     clear
     echo "Building Profile APK..."
     flutter clean
-    flutter build apk --profile -t lib/main_profile.dart
+    flutter build apk --profile -t lib/main.dart
     cp build/app/outputs/apk/profile/app-profile.apk app-profile.apk
 elif [ $option = 3 ]; then
     clear
@@ -32,7 +32,7 @@ elif [ $option = 4 ]; then
     clear
     echo "Building Pre production APK..."
     flutter clean
-    flutter build apk --release -t lib/main_prepro.dart
+    flutter build apk --release -t lib/main.dart
     cp build/app/outputs/apk/release/app-release.apk app-prepro.apk
 else
     echo 'Invalid option'
